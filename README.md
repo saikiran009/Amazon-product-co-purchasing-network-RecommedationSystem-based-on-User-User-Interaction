@@ -44,6 +44,7 @@ We do summation for the neighboring of j node.
 With the help of this we can know the similarity of the node for a particular query node and it’s ranking.
 •	As Random walks can go to random node for running for a long time we keep a threshold length L so that it walks over in that region.
 •	This helps not to search the entire graph for similar nodes of a given query.
+
 Comparing and Advantages of the one model over other:
 The Shortest distance model doesn’t consider the flow of the node and entirely depends on the distance metric. The time complexity is too high for 1-n shortest distance mapping.
 The BFS searches just the below layer for every node and gives importance to the level (biased). As we go next level similarity decreases for the coming node.  This may do not provide a strange node as a better similar to the query node and always weights its neighbors more than other layers. Fails in the case if the similar users doesn’t rate at least one common item and don’t have common neighbors. These are the drawbacks of my approach. 
